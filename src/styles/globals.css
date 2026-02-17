@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E53E3E;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #1A202C;
+  --color-secondary-foreground: #ffffff;
+  --color-accent: #F6AD55;
+  --color-accent-foreground: #1A202C;
+  --color-background: #ffffff;
+  --color-foreground: #1A202C;
+  --color-muted: #F1F5F9;
+  --color-muted-foreground: #64748B;
+  --color-card: #ffffff;
+  --color-card-foreground: #1A202C;
+  --color-border: #E2E8F0;
+  --color-input: #E2E8F0;
+  --color-ring: #E53E3E;
+  --color-destructive: #EF4444;
+  --color-destructive-foreground: #ffffff;
+  --color-popover: #ffffff;
+  --color-popover-foreground: #1A202C;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
+/* Builder-specific styles */
+.builder-canvas::-webkit-scrollbar {
+  width: 6px;
+}
+.builder-canvas::-webkit-scrollbar-track {
+  background: transparent;
+}
+.builder-canvas::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+/* Block selection */
+.canvas-block-selected {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+.canvas-block-hover {
+  outline: 1px dashed var(--color-muted-foreground);
+  outline-offset: -1px;
+}
